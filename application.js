@@ -16,14 +16,14 @@ function getTasks() {
       }
     }
   };
-  xhttp.open("GET", "https://guarded-stream-63073.herokuapp.com//todos", true);
+  xhttp.open("GET", "https://intense-shelf-53863.herokuapp.com/todos", true);
   xhttp.send();
 }
 
 window.sendForm = function (event) {
   event.preventDefault();
   var xhttp = new this.XMLHttpRequest();
-  xhttp.open("POST", "https://guarded-stream-63073.herokuapp.com//todos", true);
+  xhttp.open("POST", "https://intense-shelf-53863.herokuapp.com/todos", true);
   xhttp.onload = function (event) {
     let container = document.getElementById("container");
     let response = JSON.parse(event.target.response);
@@ -51,7 +51,7 @@ function createResponse(response) {
 }
 function deleteResponse(response_id) {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("DELETE", `https://guarded-stream-63073.herokuapp.com//todos/${response_id}`, true);
+  xhttp.open("DELETE", `https://intense-shelf-53863.herokuapp.com/todos/${response_id}`, true);
   xhttp.onload = function () {
     let target = document.getElementById(response_id);
     target.parentNode.removeChild(target);
